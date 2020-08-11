@@ -1,5 +1,5 @@
 ﻿pipeline {
-    agent any
+    agent win1
 
     environment {
         dotnet = 'C:\\Program Files (x86)\\dotnet\\'
@@ -18,25 +18,25 @@
 
         stage ('restore packages') {
             steps {
-                bat "dotnet restore WebApplication1\\WebApplication1.csproj"
+                bat "dotnet restore mvc-core-docker-to-ecs\\WebApplication1.csproj"
             }
         }
 
         stage ('clean package') {
             steps {
-                bat "dotnet clean WebApplication1\\WebApplication1.csproj"
+                bat "dotnet clean mvc-core-docker-to-ecs\\WebApplication1.csproj"
             }
         }
 
         stage ('Build package') {
             steps {
-                bat "dotnet build WebApplication1\\WebApplication1.csproj --configuration Release"
+                bat "dotnet build mvc-core-docker-to-ecs\\WebApplication1.csproj --configuration Release"
             }
         }
 
         stage ('Publish package') {
             steps {
-                bat "dotnet publish WebApplication1\\WebApplication1.csproj"
+                bat "dotnet publish mvc-core-docker-to-ecs\\WebApplication1.csproj"
             }
         }
 
