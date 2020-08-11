@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage ('checkout') {
             steps {
-                git credentialsId: 'da209a9d-3c28-40d8-a59e-cdc152009ea2', url: 'https://github.com/sajjasgit/mvc-core-docker-to-ecs.git', branch: 'master'
+                git credentialsId: 'da209a9d-3c28-40d8-a59e-cdc152009ea2', url: 'https://github.com/sajjasgit/mvc-core-docker-to-ecs.git', branch: 'origin/release1'
             }
         }
 
