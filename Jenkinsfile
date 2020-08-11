@@ -1,5 +1,7 @@
-﻿pipeline {
-    agent win1
+pipeline {
+    agent {
+        label 'win1'
+    }
 
     environment {
         dotnet = 'C:\\Program Files (x86)\\dotnet\\'
